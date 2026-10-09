@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" prefWidth="800" xmlns:fx="http://javafx.com/fxml" fx:controller="main.java.com.reclutaraspirantes.jm.controller.InventarioController">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+    <Label text="Inventario de aspirantes"/>
+    <TableView fx:id="tabla" prefHeight="280">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="100"/>
+            <TableColumn fx:id="colApellido" text="Apellido" prefWidth="100"/>
+            <TableColumn fx:id="colCorreo" text="Correo" prefWidth="170"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/>
+            <TableColumn fx:id="colEdad" text="Edad" prefWidth="50"/>
+        </columns>
+    </TableView>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Apellido" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtApellido" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Label text="Correo" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Teléfono" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtTelefono" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+        <Label text="Dirección" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtDireccion" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label text="Edad" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <TextField fx:id="txtEdad" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#onAgregar"/>
+        <Button text="Actualizar" onAction="#onActualizar"/>
+        <Button text="Eliminar" onAction="#onEliminar"/>
+        <Button text="Limpiar" onAction="#onLimpiar"/>
+        <Button text="Cerrar sesión" onAction="#onCerrarSesion"/>
+    </HBox>
+</VBox>
